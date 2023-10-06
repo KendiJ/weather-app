@@ -127,7 +127,6 @@ class DaysWeatherView extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: 
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Expanded(
                           child: Text(
@@ -140,11 +139,11 @@ class DaysWeatherView extends StatelessWidget {
                           color: Colors.white,
                         ),
                       ),
-                      Expanded(
-                          child: Text(
+                      const SizedBox(width: 60),
+                      Text(
                         "${e.temperature} °",
                         style: const TextStyle(color: Colors.white),
-                      )),
+                      ),
                     ],
                   ),
                 ))
