@@ -1,9 +1,12 @@
-name: develop branch
+name: working branch workflow
 
 on:
 
   push:
-    branches: [ develop ]
+    branches: 
+        - '*'
+        # - '!develop'
+        - '!main'
 
 
 
@@ -35,8 +38,8 @@ jobs:
     
    
 
-    - name : Build Apk    
-      run: flutter build apk --target-platform android-arm,android-arm64,android-x64 --split-per-abi
+    # - name : Build Apk    
+    #   run: flutter build apk --target-platform android-arm,android-arm64,android-x64 --split-per-abi
     
 
      
