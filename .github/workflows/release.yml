@@ -41,18 +41,11 @@ jobs:
     # - name : Run Test Coverage 
     #   run  : flutter test --coverage
 
-    - name : Install lcov
-      run  : sudo apt-get install -y lcov
 
 
-    - name : Upload Coverage To Codecov
-      uses: codecov/codecov-action@v2
-    #   with:
-        # token: ${{ secrets.CODECOV_TOKEN }} 
-        # files: coverage/lcov.info
 
-    - name : Build Apk    
-      run: flutter build apk --target-platform android-arm,android-arm64,android-x64 --split-per-abi
+    # - name : Build Apk    
+    #   run: flutter build apk --target-platform android-arm,android-arm64,android-x64 --split-per-abi
     
 
      
