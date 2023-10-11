@@ -10,10 +10,20 @@ final class WeatherForecastCubitLoading extends WeatherForecastCubitState {}
 final class WeatherForecastCubitSuccess extends WeatherForecastCubitState {
   final ForecastResponse forecastRes;
   final double temperature;
-  final String weather;
+  final Weather weather;
+  final double tempCurrent;
+  final double tempMin;
+  final double tempMax;
+  final List<ListElement> weatherList;
 
-  WeatherForecastCubitSuccess(
-      {required this.forecastRes, required this.temperature, required this.weather,});
+  WeatherForecastCubitSuccess({required this.forecastRes,
+      required this.temperature,
+      required this.weather,
+      required this.weatherList,
+      required this.tempCurrent,
+      required this.tempMax,
+      required this.tempMin
+      });
 }
 
 final class WeatherForecastCubitFail extends WeatherForecastCubitState {

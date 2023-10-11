@@ -1,6 +1,7 @@
 // ignore_for_file: unrelated_type_equality_checks
 
 import 'package:flutter/material.dart';
+import 'package:weather_app/domain/model/forecast_responce.dart';
 import 'package:weather_app/presentation/views/days_weather_view.dart';
 import 'package:weather_app/presentation/views/image_widget.dart';
 import 'package:weather_app/presentation/widgets/consts/theme.dart';
@@ -33,11 +34,11 @@ class _RainyView extends State<RainyView> {
               children: [
                 // Text(state.forecastRes.city.name),
                 ImageWidget(
-                  response: state.forecastRes,
-                  weather: state.weather,
-                  temperature: state.temperature,
+                  weatherForecastCubitSuccess: state,
                 ),
-                const Expanded(child: DaysWeatherView())
+                Expanded(child: DaysWeatherView(
+                    weatherForecastCubitSuccess: state
+                ))
               ],
             );
           } else {
@@ -53,9 +54,10 @@ class _RainyView extends State<RainyView> {
 class DayWeather {
   final String day;
   final num temperature;
+  final MainEnum weather;
 
   DayWeather({
     required this.day,
-    required this.temperature,
+    required this.temperature, required this.weather,
   });
 }

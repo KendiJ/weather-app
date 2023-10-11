@@ -17,6 +17,7 @@ dependencies:
   bloc: ^8.1.2
   meta: ^1.9.1
   geolocator: ^10.1.0
+  intl: ^0.18.1
 
 dev_dependencies:
   flutter_test:
