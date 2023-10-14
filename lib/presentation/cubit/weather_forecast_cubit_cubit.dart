@@ -32,7 +32,7 @@ class WeatherForecastCubitCubit extends Cubit<WeatherForecastCubitState> {
 
         mappedResponse.forEach((key, value) {
           if(key.hour == hourOfWeatherToBeDisplayed) {
-            print(key);
+            // print(key);
             dataToBeReturned.add(value);
           }
         });
