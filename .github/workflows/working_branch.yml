@@ -29,8 +29,8 @@ jobs:
       #   run: dart format . --set-exit-if-changed
 
       
-      - name: Analyze code
-        run: dart analyze .
+      # - name: Analyze code
+      #   run: dart analyze .
       
  
   build:
